@@ -16,6 +16,7 @@ namespace UserMaintenance
             label2.Text = Resource1.FirstName;
             button1.Text = Resource1.Add;
             button2.Text = Resource1.WriteToFile;
+            button3.Text = Resource1.Delete;
 
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
@@ -38,6 +39,12 @@ namespace UserMaintenance
             SaveFileDialog sfd = new SaveFileDialog();
             
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var törlendő = (User)(listBox1.SelectedItem);
+            users.Remove(törlendő);
         }
     }
 
