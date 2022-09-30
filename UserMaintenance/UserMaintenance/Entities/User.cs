@@ -13,13 +13,11 @@ namespace UserMaintenance.Entities
 
         public string LastName { get; set; }
 
-        private string FullName;
-
-        public string MyProperty
+        public string FullName
         {
             get 
             {
-                return string.Format("{0}{1}", LastName, FirstName);
+                return string.Format("{0} {1}", LastName, FirstName);
             }
            
         }
