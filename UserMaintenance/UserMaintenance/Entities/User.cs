@@ -13,9 +13,7 @@ namespace UserMaintenance.Entities
 
         public string LastName { get; set; }
 
-        private string FullName;
-
-        public string MyProperty
+        public string FullName
         {
             get 
             {
