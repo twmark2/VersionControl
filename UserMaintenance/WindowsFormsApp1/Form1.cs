@@ -20,7 +20,8 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            
+            asd();
+            dataGridView1.DataSource = Rates;
         }
 
         private void asd() 
@@ -36,7 +37,8 @@ namespace WindowsFormsApp1
             };
             var response = mnbService.GetExchangeRates(request);
             var result = response.GetExchangeRatesResult;
-
+            
         }
+        
     }
 }
