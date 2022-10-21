@@ -69,6 +69,8 @@ namespace WindowsFormsApp1
 
         private void ChartCreation() 
         {
+           // Rates.Clear();
+
             var series = chartRateData.Series[0];
             series.ChartType= SeriesChartType.Line;
             series.XValueMember = "Date";
