@@ -38,7 +38,25 @@ namespace _6.het
 
         private void ConveyorTimer_Tick(object sender, EventArgs e)
         {
-
+            foreach (var ball in _balls)
+            {
+                var maxPosition = 0;
+                ball.MoveBall();
+                if (ball.Left>maxPosition)
+                {
+                    ball.MoveBall();
+                    if (ball.Left > maxPosition)
+                    {
+                        maxPosition = ball.Left;
+                    }
+                    if (maxPosition>1000)
+                    {
+                        var oldestBall = _balls[0];
+                        MainPanel.Controls.Remove(oldestBall);
+                        _balls.Remove(oldestBall);
+                    }
+                }
+            }
         }
     }
 }
