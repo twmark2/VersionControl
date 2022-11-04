@@ -13,7 +13,7 @@ namespace _6.het
 {
     public partial class Form1 : Form
     {
-        private List<Ball> balls = new List<Ball>();
+        private List<Ball> _balls = new List<Ball>();
         private BallFactory _factory;
         public BallFactory Factory
         {
@@ -21,13 +21,23 @@ namespace _6.het
             set { _factory = value; }
         }
 
-
-
-
         public Form1()
         {
             InitializeComponent();
+            Factory = new BallFactory();
 
+        }
+
+        private void CreateTimer_Tick(object sender, EventArgs e)
+        {
+            var ball = Factory.CreateNew();
+            _balls.Add(ball);
+            ball.Left = -ball.Width;
+            MainPanel.Controls.Add(ball);
+        }
+
+        private void ConveyorTimer_Tick(object sender, EventArgs e)
+        {
 
         }
     }
