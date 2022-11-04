@@ -41,10 +41,10 @@ namespace _6.het
             foreach (var ball in _balls)
             {
                 var maxPosition = 0;
-                ball.MoveBall();
+                ball.MoveToy();
                 if (ball.Left>maxPosition)
                 {
-                    ball.MoveBall();
+                    ball.MoveToy();
                     if (ball.Left > maxPosition)
                     {
                         maxPosition = ball.Left;
