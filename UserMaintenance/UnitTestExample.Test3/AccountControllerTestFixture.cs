@@ -9,8 +9,7 @@ namespace UnitTestExample.Test3
 {
     public class AccountControllerTestFixture
     {
-        [Test,
-     TestCase("abcd1234", false),
+        [Test,TestCase("abcd1234", false),
      TestCase("irf@uni-corvinus", false),
      TestCase("irf.uni-corvinus.hu", false),
      TestCase("irf@uni-corvinus.hu", true)]
@@ -18,17 +17,9 @@ namespace UnitTestExample.Test3
         public void TestValidateEmail(string email, bool expectedResult)
         {
             var accountController = new AccountController();
-
-
             var actualResult = accountController.ValidateEmail(email);
-
-
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(expectedResult, actualResult);
-
-
         }
-
-
 
         [
     Test,
@@ -39,17 +30,13 @@ namespace UnitTestExample.Test3
         {
             
             var accountController = new AccountController();
-
             
             var actualResult = accountController.Register(email, password);
-
             
             Assert.AreEqual(email, actualResult.Email);
             Assert.AreEqual(password, actualResult.Password);
             Assert.AreNotEqual(Guid.Empty, actualResult.ID);
         }
-
-
         [
     Test,
     TestCase("irf@uni-corvinus", "Abcd1234"),
@@ -60,10 +47,8 @@ namespace UnitTestExample.Test3
     TestCase("irf@uni-corvinus.hu", "Ab1234"),
 ]
         public void TestRegisterValidateException(string email, string password)
-        {
-           
+        {           
             var accountController = new AccountController();
-
           
             try
             {
@@ -73,9 +58,7 @@ namespace UnitTestExample.Test3
             catch (Exception ex)
             {
                 Assert.IsInstanceOf<ValidationException>(ex);
-            }
-
-            
+            }            
         }
 
         [
@@ -91,7 +74,6 @@ namespace UnitTestExample.Test3
                 .Throws<ApplicationException>();
             var accountController = new AccountController();
             accountController.AccountManager = accountServiceMock.Object;
-
             
             try
             {
@@ -102,8 +84,7 @@ namespace UnitTestExample.Test3
             {
                 Assert.IsInstanceOf<ApplicationException>(ex);
             }
-
-           
+                       
         }
     }
 }
