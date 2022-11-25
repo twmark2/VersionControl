@@ -47,5 +47,34 @@ namespace UnitTestExample.Test3
         }
 
 
+        [
+    Test,
+    TestCase("irf@uni-corvinus", "Abcd1234"),
+    TestCase("irf.uni-corvinus.hu", "Abcd1234"),
+    TestCase("irf@uni-corvinus.hu", "abcd1234"),
+    TestCase("irf@uni-corvinus.hu", "ABCD1234"),
+    TestCase("irf@uni-corvinus.hu", "abcdABCD"),
+    TestCase("irf@uni-corvinus.hu", "Ab1234"),
+]
+        public void TestRegisterValidateException(string email, string password)
+        {
+           
+            var accountController = new AccountController();
+
+          
+            try
+            {
+                var actualResult = accountController.Register(email, password);
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOf<ValidationException>(ex);
+            }
+
+            
+        }
+
+
     }
 }
