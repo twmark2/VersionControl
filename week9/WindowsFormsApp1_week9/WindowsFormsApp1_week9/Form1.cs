@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace week9_tasks_project
+namespace WindowsFormsApp1_week9
 {
     public partial class Form1 : Form
     {

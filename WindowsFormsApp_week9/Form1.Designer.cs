@@ -1,5 +1,5 @@
 ﻿
-namespace week9_tasks_project
+namespace WindowsFormsApp_week9
 {
     partial class Form1
     {

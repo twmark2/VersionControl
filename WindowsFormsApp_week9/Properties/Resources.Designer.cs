@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace week9_tasks_project.Properties
+namespace WindowsFormsApp_week9.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -43,7 +43,7 @@ namespace week9_tasks_project.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("week9_tasks_project.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WindowsFormsApp_week9.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

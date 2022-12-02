@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7964F881-B2F8-427B-BF95-E8E7DAF700EF}</ProjectGuid>
+    <ProjectGuid>{E5BC7378-33DD-468F-BFCB-C6910BFA6429}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>week9_tasks_project</RootNamespace>
-    <AssemblyName>week9_tasks_project</AssemblyName>
+    <RootNamespace>WindowsFormsApp1_week9</RootNamespace>
+    <AssemblyName>WindowsFormsApp1_week9</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
