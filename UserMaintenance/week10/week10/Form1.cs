@@ -54,7 +54,7 @@ namespace week10
 
 
             var winners = from p in topPerformers
-                          where p.IsWinner
+                          where !p.IsWinner
                           select p;
             if (winners.Count() > 0)
             {
